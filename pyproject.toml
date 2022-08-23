@@ -16,6 +16,9 @@ pandas-ga = "^0.1"
 Pandas3 = "^0.0.1"
 calculate-retention = "^0.0.5"
 latimes-calculate = "^0.3.1"
+chromedriver = "^2.24.1"
+Selenium-Screenshot = "^2.0.0"
+selenium = "^4.4.3"
 
 [tool.poetry.dev-dependencies]
 debugpy = "^1.6.2"
