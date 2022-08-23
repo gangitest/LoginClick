@@ -22,7 +22,7 @@ def main():
   driver = get_drvier()
   driver.find_element(by="id", value="login_field").send_keys("nallagondu")
   time.sleep(2)
-  driver.find_element(by="id", value="password").send_keys("Ganga@github2" + Keys.RETURN)
+  driver.find_element(by="id", value="password").send_keys("999@github2" + Keys.RETURN)
   time.sleep(2)
   driver.find_element(by="xpath", value='//*[@id="details-ff8bc2"]/summary').click()
   print(driver.current_url)
