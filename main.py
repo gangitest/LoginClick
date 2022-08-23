@@ -1,6 +1,8 @@
 # Author:Gangireddy
 
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
 
 def get_drvier():
   # Set options to make browsing easier
@@ -13,13 +15,17 @@ def get_drvier():
   options.add_argument("disable-blink-features=AutomationControlled")
 
   driver = webdriver.Chrome(options=options)
-  driver.get("https://en.wikipedia.org/wiki/Main_Page")
+  driver.get("https://github.com/login")
   return driver
 
 def main():
   driver = get_drvier()
-  element = driver.find_element(by="xpath", value='//*[@id="mp-tfp"]/table')
-  return element.text
+  driver.find_element(by="id", value="login_field").send_keys("nallagondu")
+  time.sleep(2)
+  driver.find_element(by="id", value="password").send_keys("Ganga@github2" + Keys.RETURN)
+  time.sleep(2)
+  driver.find_element(by="xpath", value='//*[@id="details-ff8bc2"]/summary').click()
+  print(driver.current_url)
 
 print(main())
 
